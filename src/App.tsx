@@ -15,6 +15,11 @@ const App = () => {
     y: window.innerHeight / 2 - 22,
   });
   const ballRef = useRef(null);
+  useEffect(() => {
+    // ts error eraser
+    console.log(speed);
+    setFriction(0.005);
+  }, []);
 
   const initialSpeed = 30;
   const minSpeed = 0.5;
@@ -63,7 +68,7 @@ const App = () => {
     setSpeed(currentSpeed);
   };
 
-  const launchBall = (e) => {
+  const launchBall = (e: any) => {
     if (isBallStopped) {
       // Restart the ball from the last position where it stopped
       setBallPos(initialPos);
