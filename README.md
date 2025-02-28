@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# Ball Bouncing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Ball Bouncing](https://ball-bouncing-saied83.netlify.app/preview.png)
 
-Currently, two official plugins are available:
+This project is a simple ball movement simulation built using **React** and **TypeScript**. The ball moves based on user interaction and is affected by friction. It can bounce off the edges of the screen and eventually come to a stop. Clicking on the canvas launches the ball in a specific direction.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Click to launch the ball in a given direction.
+- Ball slows down due to friction.
+- Bounces off the screen edges.
+- Stops when speed drops below a threshold.
+- Click to restart the ball from the last stopped position.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Live Demo
 
-- Configure the top-level `parserOptions` property like this:
+[Ball Bouncing App](https://ball-bouncing-saied83.netlify.app)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠 Tech Stack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **React** - Component-based UI
+- **Vite** - Fast build tool
+- **TypeScript (TSX)** - Static typing
+- **TailwindCSS** - Utility-first CSS framework
+- **PNPM** - Efficient package management
+- **Netlify** - Deployment platform
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📦 Installation & Setup
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# Ball Movement Simulation
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/ball-simulation.git
+   cd ball-simulation
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## How It Works
+
+- The `useState` and `useEffect` hooks manage the ball's position, velocity, and speed.
+- The ball moves every 16ms (~60 FPS) using `setInterval`.
+- Friction is applied to gradually slow the ball down.
+- The ball bounces when it hits the screen edges.
+- Clicking on the canvas launches or resets the ball.
+
+## Code Overview
+
+- `ballPos`: Tracks the ball's x and y position.
+- `ballVelocity`: Controls movement speed and direction.
+- `friction`: Reduces speed over time.
+- `launchBall(event)`: Handles launching the ball.
+- `moveBall()`: Updates position and applies physics.
+
+## Future Improvements
+
+- Add different friction levels.
+- Introduce obstacles or targets.
+- Improve visuals with animations and better graphics.
+
+---
+
+Made with ❤️ by [Your Name](https://github.com/saied83)
