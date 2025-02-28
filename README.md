@@ -1,6 +1,6 @@
 # Ball Bouncing App
 
-![Ball Bouncing](https://ball-bouncing-saied83.netlify.app/preview.png)
+![Ball Bouncing](https://github.com/saied83/bouncing-ball/blob/main/preview.png)
 
 This project is a simple ball movement simulation built using **React** and **TypeScript**. The ball moves based on user interaction and is affected by friction. It can bounce off the edges of the screen and eventually come to a stop. Clicking on the canvas launches the ball in a specific direction.
 
