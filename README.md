@@ -69,4 +69,4 @@ This project is a simple ball movement simulation built using **React** and **Ty
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/saied83)
+Made with ❤️ by [Saied83](https://github.com/saied83)
